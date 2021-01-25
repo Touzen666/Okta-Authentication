@@ -6,22 +6,22 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { HelloComponent } from './hello.component';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     RouterModule.forRoot([
       {
-        path: 'team/:id',
-        component: OktaAuthGuard,
+        path: '',
+        component: HelloComponent,
         canActivate: [OktaAuthGuard],
       },
     ]),
     BrowserModule,
     AppRoutingModule,
-    OktaAuthGuard,
   ],
-  providers: [OktaAuthGuard, OktaAuthService, Router],
+  providers: [OktaAuthGuard, OktaAuthService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
