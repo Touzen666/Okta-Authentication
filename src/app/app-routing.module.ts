@@ -1,10 +1,23 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
-const routes: Routes = [];
+import { OktaAuthGuard } from './app.guard';
+import { CallbackComponent } from './callback/callback.component';
+import { ProtectedComponent } from './protected/protected.component';
+const routes: Routes = [
+  {
+    path: 'callback',
+    component: CallbackComponent,
+  },
+  {
+    path: 'protected',
+    component: ProtectedComponent,
+    canActivate: [OktaAuthGuard],
+  },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
