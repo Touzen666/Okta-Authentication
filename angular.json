@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Okta-Authentication": {
+    "Praca-inzynierska": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Okta-Authentication",
+            "outputPath": "dist/Praca-inzynierska",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -62,18 +62,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Okta-Authentication:build"
+            "browserTarget": "Praca-inzynierska:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Okta-Authentication:build:production"
+              "browserTarget": "Praca-inzynierska:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Okta-Authentication:build"
+            "browserTarget": "Praca-inzynierska:build"
           }
         },
         "test": {
@@ -110,15 +110,15 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Okta-Authentication:serve"
+            "devServerTarget": "Praca-inzynierska:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Okta-Authentication:serve:production"
+              "devServerTarget": "Praca-inzynierska:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "Okta-Authentication"
+  "defaultProject": "Praca-inzynierska"
 }

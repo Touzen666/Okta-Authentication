@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Okta-Authentication'`, () => {
+  it(`should have as title 'Praca-inzynierska'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Okta-Authentication');
+    expect(app.title).toEqual('Praca-inzynierska');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Okta-Authentication app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('Praca-inzynierska app is running!');
   });
 });

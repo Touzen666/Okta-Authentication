@@ -1,8 +1,12 @@
-
-<button routerLink="/"> Home </button>
-<button *ngIf="!isAuthenticated" (click)="oktaAuth.login('/')"> Login </button>
-<button *ngIf="isAuthenticated" (click)="oktaAuth.logout()"> Logout </button>
-<button routerLink="/protected"> Protected </button>
-
-
+<mat-toolbar color="primary" class="expanded-toolbar">
+  <span>
+    <button mat-button routerLink="/">{{title}}</button>
+    <button mat-button routerLink="/"><mat-icon>home</mat-icon></button>
+  </span>
+  <span>
+    <button mat-button *ngIf="!isAuthenticated" routerLink="/login"> Login </button>
+    <button mat-button *ngIf="isAuthenticated" (click)="logout()"> Logout </button>
+  </span>
+  <button mat-button routerLink="/calculator"><mat-icon>Calculator</mat-icon></button>
+</mat-toolbar>
 <router-outlet></router-outlet>
